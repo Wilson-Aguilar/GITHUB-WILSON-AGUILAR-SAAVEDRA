@@ -1,0 +1,29 @@
+#padre{
+    width: 70%;
+    height: 600px;
+    border: 5px solid black;
+    margin: auto; /* hace que un elemento no inline (block, flex, etc) con un ancho definido tenga margenes automaticos
+    (esto incluye derecha a izquierda) lo produce que el bloque se centre */
+    display: flex; /* hace que aparezcan los hijos en forma de fila horizontal*/
+    flex-wrap: wrap; /* HACE RESPETAR EL ANCHO */
+    /*justify-content: center;  pone a los cuadritos centrados*/
+    justify-content: space-between;
+    align-items: center; /*alineado de manera vertical*/
+}
+
+.hijo{
+    width: 200px;
+    height: 100px;
+    background-color: yellowgreen;
+    margin: 30px; /* esto hara que se separe en cuadritos*/
+    padding: 20px; /*hara crecer a los cuadritos*/
+    font-size: 20px; /*especifica la dimension de la letra*/
+    text-align: center; /* centrado horizontal*/
+    line-height: 100px; /* centrado vertical*/
+    /*propiedades del hijo*/
+    flex-grow: 1; /*va a ser que el hijo crezca la cagita del with para que ocupe todo el ancho*/
+    flex-shrink: 1; /* va a ser que el hijo disminuya la cagita del with para que ocupe todo el anchO*/
+    flex-basis: 200PX;
+    /* METODO ABREVIADO
+    flex: 1 1 200px; */
+}
